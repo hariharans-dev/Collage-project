@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Projects</title>
+    <link rel="stylesheet" href="../styles/searchproject.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="website">
+          <a href="../index.html">College Project Forum</a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="searchproject.html">Search Projects</a></li>
+            <li><a href="postproject.html">Post Projects</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <h2>Search for Projects</h2>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Enter keywords..." />
+        <select id="theme-select">
+          <option value="">Select a theme</option>
+          <option value="web-development">Web Development</option>
+          <option value="iot">IoT</option>
+          <option value="machine-learning">Machine Learning</option>
+          <option value="electronics">Electronics</option>
+        </select>
+        <button onclick="searchProjects()">Search</button>
+      </div>
+
+      <div class="results" id="search-results">
+        <!-- Project search results will be displayed here -->
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 College Project Forum | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script src="script/searchproject.js"></script>
+  </body>
+</html>

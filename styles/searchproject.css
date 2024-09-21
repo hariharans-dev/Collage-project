@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    float: left;
+    margin-left: 20px;
+}
+
+header nav {
+    float: right;
+    margin-right: 20px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #f4f4f4;
+    text-decoration: underline;
+}
+
+.website a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    margin-top: 20px; /* Add spacing below header */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"],
+.search-bar select {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar select {
+    width: 25%;
+}
+
+.search-bar button {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+}
+
+.search-bar button:hover {
+    background: #555;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+.results .project-item {
+    background-color: #fff; /* Change to white background for project items */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.results .project-item h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.results .project-item p {
+    margin: 0;
+    color: #666;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
