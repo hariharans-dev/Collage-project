@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Project - College Project Forum</title>
+    <link rel="stylesheet" href="../styles/postproject.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="website"><a href="../index.html">College Project Forum</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Search Projects</a></li>
+                    <li><a href="postproject.html">Post Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Post Project Section -->
+    <section class="post-project">
+        <div class="container">
+            <h2>Post Your Project</h2>
+            <p>Fill in the details about your project and get help from others or hire someone to complete it.</p>
+            
+            <form action="#" method="POST" class="project-form">
+                <div class="form-group">
+                    <label for="project-title">Project Title</label>
+                    <input type="text" id="project-title" name="project-title" placeholder="Enter your project title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="project-description">Project Description</label>
+                    <textarea id="project-description" name="project-description" rows="5" placeholder="Provide a detailed description of your project" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="project-budget">Budget ($)</label>
+                    <input type="number" id="project-budget" name="project-budget" placeholder="Enter your project budget" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="project-deadline">Deadline</label>
+                    <input type="date" id="project-deadline" name="project-deadline" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn">Post Project</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 College Project Forum | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
