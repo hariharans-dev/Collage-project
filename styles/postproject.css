@@ -1,137 +1,388 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
 }
 
 header h1 {
-    float: left;
-    margin-left: 20px;
+  float: left;
+  margin-left: 20px;
 }
 
 header nav {
-    float: right;
-    margin-right: 20px;
+  float: right;
+  margin-right: 20px;
 }
 
 header nav ul {
-    list-style: none;
+  list-style: none;
 }
 
 header nav ul li {
-    display: inline;
-    margin: 0 10px;
+  display: inline;
+  margin: 0 10px;
 }
 
 header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 header nav ul li a:hover {
-    color: #f4f4f4;
-    text-decoration: underline;
+  color: #f4f4f4;
+  text-decoration: underline;
 }
 
-.website a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+.website a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .post-project {
-    padding: 50px 0;
-    background-color: #f4f4f4;
-    text-align: center;
+  padding: 50px 0;
+  background-color: #f4f4f4;
+  text-align: center;
 }
 
 .post-project h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
 .post-project p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
+  font-size: 1.2em;
+  margin-bottom: 40px;
 }
 
 .project-form {
-    width: 60%;
-    margin: auto;
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-    margin-bottom: 20px;
-    text-align: left;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .form-group label {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+}
+
+.select-container input[type="text"] {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.select-container select {
+  flex-basis: 200px;
+  appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"><polygon points="0,0 5,5 10,0" style="fill:%23333;"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
 }
 
 .form-group input[type="text"],
 .form-group input[type="number"],
 .form-group input[type="date"],
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .form-group textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 .form-group button {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    width: 100%;
-    border: none;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  border: none;
 }
 
 .form-group button:hover {
-    background: #555;
+  background: #555;
 }
 
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#category-create {
+  flex: 1;
+  padding: 12px; /* Slightly increased padding for comfort */
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+}
+
+#category-create:focus {
+  border-color: #333;
+  outline: none;
+  box-shadow: 0 0 5px rgba(51, 51, 51, 0.5); /* Subtle shadow on focus */
+}
+
+#add-category-btn {
+  background: #333;
+  color: #fff;
+  padding: 10px 15px; /* Increased padding for a better button size */
+  font-size: 1em; /* Increased font size for readability */
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+  width: auto;
+  min-width: 120px; /* Slightly increased minimum width */
+}
+
+#add-category-btn:hover {
+  background: #555;
+}
+
+#new-category-message {
+  margin-top: 10px;
+  color: #666;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+#new-category-message.success {
+  color: green;
+}
+
+#new-category-message.error {
+  color: red;
+}
+
+.info-message {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1em;
+  color: #555;
+}
+
+.info-message p {
+  margin: 0;
+}
+
+#refresh-btn {
+  background: #333;
+  color: #fff;
+  padding: 10px 15px; /* Increased padding for a better button size */
+  font-size: 1em; /* Increased font size for readability */
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+  width: auto;
+  min-width: 120px;
+}
+
+#refresh-btn:hover {
+  background: #555;
+}
+
+.select-container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  margin-bottom: 20px; /* Space below the container */
+}
+
+.form-control,
+.form-select {
+  flex: 1;
+  margin-right: 10px; /* Space between elements */
+}
+
+#collage-create {
+  flex: 1;
+  padding: 12px; /* Slightly increased padding for comfort */
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+}
+
+#collage-create:focus {
+  border-color: #333;
+  outline: none;
+  box-shadow: 0 0 5px rgba(51, 51, 51, 0.5); /* Subtle shadow on focus */
+}
+
+#add-collage-btn {
+  background: #333;
+  color: #fff;
+  padding: 10px 15px; /* Increased padding for a better button size */
+  font-size: 1em; /* Increased font size for readability */
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+  width: auto;
+  min-width: 120px; /* Slightly increased minimum width */
+}
+
+#add-collage-btn:hover {
+  background: #555;
+}
+
+#new-collage-message {
+  margin-top: 10px;
+  color: #666;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+#new-collage-message.success {
+  color: green;
+}
+
+#new-collage-message.error {
+  color: red;
+}
+
+.collage-info-message {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0;
+  text-align: left; /* Left-aligned text */
+  font-size: 1em;
+  color: #555;
+}
+
+.collage-info-message p {
+  margin: 0;
+}
+
+#refresh-collage-btn {
+  background: #333;
+  color: #fff;
+  padding: 10px 15px; /* Increased padding for a better button size */
+  font-size: 1em; /* Increased font size for readability */
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+  width: auto;
+  min-width: 120px;
+}
+
+#refresh-collage-btn:hover {
+  background: #555;
+}
+
+.form-group {
+  margin-bottom: 25px; /* Space between groups */
+  background-color: #f9f9f9; /* Light background for differentiation */
+  border: 1px solid #ccc; /* Border for definition */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Padding for inner spacing */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.form-group:last-child {
+  margin-bottom: 0; /* Remove margin for the last group */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px; /* Slightly increased space between contact items */
+}
+
+.contact-item button,
+#add-contact {
+  background: #333;
+  color: #fff;
+  padding: 8px 12px; /* Reduced padding for smaller button size */
+  font-size: 0.9em; /* Decreased font size */
+  border-radius: 4px; /* Slightly smaller border radius */
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+  width: auto;
+  min-width: 100px; /* Adjusted minimum width */
+}
+
+.contact-item button:hover,
+#add-contact:hover {
+  background: #555;
+}
+
+.contact-input:focus,
+.contact-value:focus {
+  border-color: #333; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 3px rgba(51, 51, 51, 0.3); /* Add shadow effect on focus */
+}
+
+#budget-amount {
+  width: 100%; /* Full width for input */
+  padding: 10px; /* Consistent padding */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Rounded corners */
 }
