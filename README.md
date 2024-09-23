@@ -20,3 +20,10 @@ post page:
 -> project description
 -> help or doubts in project / pay to do project
 -> if paid mention the amount
+
+serach page
+
+-> contains collage serach and drop box
+-> contains category of the project searching for
+-> search for title of the project
+-> list of projects relevant to the searches

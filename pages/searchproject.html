@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search Projects</title>
+    <title>Search Projects - College Project Forum</title>
     <link rel="stylesheet" href="../styles/searchproject.css" />
   </head>
   <body>
+    <!-- Header Section -->
     <header>
       <div class="container">
         <h1 class="website">
@@ -21,30 +22,83 @@
       </div>
     </header>
 
-    <div class="container">
-      <h2>Search for Projects</h2>
-      <div class="search-bar">
-        <input type="text" id="search-input" placeholder="Enter keywords..." />
-        <select id="theme-select">
-          <option value="">Select a theme</option>
-          <option value="web-development">Web Development</option>
-          <option value="iot">IoT</option>
-          <option value="machine-learning">Machine Learning</option>
-          <option value="electronics">Electronics</option>
-        </select>
-        <button onclick="searchProjects()">Search</button>
-      </div>
-
-      <div class="results" id="search-results">
-        <!-- Project search results will be displayed here -->
-      </div>
-    </div>
-    <!-- <footer>
+    <!-- Search Project Section -->
+    <section class="search-project">
       <div class="container">
-        <p>&copy; 2024 College Project Forum | All Rights Reserved</p>
+        <h2>Find a Project</h2>
+        <p>Search for projects based on title, category, or college.</p>
+
+        <form action="#" method="GET" class="search-form">
+          <div class="form-group">
+            <label for="search-college">College / University</label>
+            <div class="select-container">
+              <input
+                type="text"
+                id="college-search"
+                placeholder="Search for a college..."
+                onkeyup="filterColleges()"
+                class="form-control"
+              />
+              <select
+                id="search-college"
+                name="search-college"
+                class="form-select"
+              >
+                <option value="">Select a college...</option>
+                <!-- Populate dynamically -->
+              </select>
+            </div>
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="search-title">Project Title</label>
+            <input
+              type="text"
+              id="search-title"
+              name="search-title"
+              placeholder="Enter project title"
+            />
+          </div> -->
+
+          <div class="form-group">
+            <label for="category-search">Category</label>
+            <div class="select-container">
+              <input
+                type="text"
+                id="category-search"
+                placeholder="Search for a category..."
+                onkeyup="filterCategories()"
+                class="form-control"
+              />
+              <select
+                id="project-category"
+                name="project-category"
+                required
+                class="form-select"
+              >
+                <option value="">Select a category...</option>
+                <!-- Options will be populated dynamically -->
+              </select>
+            </div>
+            <div class="info-message">
+              <p>If the category is not available, create a new category...</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn">Search</button>
+          </div>
+        </form>
       </div>
+    </section>
+
+    <!-- Footer Section -->
+    <!-- <footer>
+        <div class="container">
+            <p>&copy; 2024 College Project Forum | All Rights Reserved</p>
+        </div>
     </footer> -->
 
-    <script src="script/searchproject.js"></script>
+    <script src="../script/searchproject.js"></script>
   </body>
 </html>

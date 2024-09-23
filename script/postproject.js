@@ -161,6 +161,8 @@ function filterCollage() {
   populateCollegeDropdown(filteredColleges);
 }
 
+document.addEventListener("DOMContentLoaded", fetchColleges);
+
 function refreshCollage() {
   fetch(getCollegesApiURL, { mode: "cors" }) // Replace with your actual API URL
     .then((response) => response.json())
@@ -179,8 +181,6 @@ function refreshCollage() {
       console.error("Error refreshing colleges:", error);
     });
 }
-
-document.addEventListener("DOMContentLoaded", fetchColleges);
 
 function addCollage() {
   const newCollage = document.getElementById("collage-create").value.trim();
