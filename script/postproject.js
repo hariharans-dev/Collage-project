@@ -1,19 +1,18 @@
-const getapiURL =
-  "https://ftvazegzmd.execute-api.ap-south-1.amazonaws.com/stage1/getcategory";
-const postapiURL =
-  "https://ftvazegzmd.execute-api.ap-south-1.amazonaws.com/stage1/postcategory";
+const categoryurl =
+  "https://vs7livci6i.execute-api.ap-south-1.amazonaws.com/stage/category";
 
-const getCollegesApiURL =
-  "https://ftvazegzmd.execute-api.ap-south-1.amazonaws.com/stage1/getcollage";
-const postCollegesApiURL =
-  "https://ftvazegzmd.execute-api.ap-south-1.amazonaws.com/stage1/postcollage";
+const collageurl =
+  "https://vs7livci6i.execute-api.ap-south-1.amazonaws.com/stage/collage";
 
-const post_form_api_url =
-  "https://ftvazegzmd.execute-api.ap-south-1.amazonaws.com/stage1/post-form";
+const projecturl =
+  "https://vs7livci6i.execute-api.ap-south-1.amazonaws.com/stage/project";
+
 let categories = [];
 
+let colleges = [];
+
 function fetchCategories() {
-  fetch(getapiURL, { mode: "cors" })
+  fetch(categoryurl, { mode: "cors" })
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -52,7 +51,7 @@ function filterCategories() {
 }
 
 function refreshCategories() {
-  fetch(getapiURL, { mode: "cors" })
+  fetch(categoryurl, { mode: "cors" })
     .then((response) => response.json())
     .then((data) => {
       const categorySelect = document.getElementById("project-category");
@@ -80,7 +79,7 @@ function addCategory() {
     .toLowerCase();
 
   if (newCategory) {
-    fetch(postapiURL, {
+    fetch(categoryurl, {
       method: "POST",
       mode: "cors",
       headers: {
@@ -120,10 +119,8 @@ function addCategory() {
   }
 }
 
-let colleges = [];
-
 function fetchColleges() {
-  fetch(getCollegesApiURL, { mode: "cors" }) // Replace with your actual API URL
+  fetch(collageurl, { mode: "cors" }) // Replace with your actual API URL
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -164,7 +161,7 @@ function filterCollage() {
 document.addEventListener("DOMContentLoaded", fetchColleges);
 
 function refreshCollage() {
-  fetch(getCollegesApiURL, { mode: "cors" }) // Replace with your actual API URL
+  fetch(collageurl, { mode: "cors" }) // Replace with your actual API URL
     .then((response) => response.json())
     .then((data) => {
       const collegeSelect = document.getElementById("project-collage");
@@ -186,7 +183,7 @@ function addCollage() {
   const newCollage = document.getElementById("collage-create").value.trim();
 
   if (newCollage) {
-    fetch(postCollegesApiURL, {
+    fetch(collageurl, {
       method: "POST",
       mode: "cors",
       headers: {
@@ -296,6 +293,7 @@ function toggleBudgetField() {
     budgetField.style.display = "none"; // Hide budget field
   }
 }
+
 document
   .querySelector(".project-form")
   .addEventListener("submit", function (event) {
@@ -325,7 +323,7 @@ document
     console.log(JSON.stringify(formData, null, 2));
 
     // Send POST request to the API
-    fetch(post_form_api_url, {
+    fetch(projecturl, {
       // Replace with your API endpoint
       method: "POST",
       headers: {

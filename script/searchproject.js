@@ -1,8 +1,11 @@
-const getCollegesURL =
-  "https://ftvazegzmd.execute-api.ap-south-1.amazonaws.com/stage1/getcollage";
+const categoryurl =
+  "https://vs7livci6i.execute-api.ap-south-1.amazonaws.com/stage/category";
 
-const getCategoriesURL =
-  "https://ftvazegzmd.execute-api.ap-south-1.amazonaws.com/stage1/getcategory";
+const collageurl =
+  "https://vs7livci6i.execute-api.ap-south-1.amazonaws.com/stage/collage";
+
+const projecturl =
+  "https://vs7livci6i.execute-api.ap-south-1.amazonaws.com/stage/project";
 
 function searchProjects() {
   const searchInput = document
@@ -41,7 +44,7 @@ function searchProjects() {
 let categories = [];
 
 function fetchCategories() {
-  fetch(getCategoriesURL, { mode: "cors" })
+  fetch(categoryurl, { mode: "cors" })
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -58,6 +61,7 @@ function fetchCategories() {
       console.error("Error fetching categories:", error);
     });
 }
+
 function populateDropdown(categories) {
   const categorySelect = document.getElementById("project-category");
   categorySelect.innerHTML = '<option value="">Select a category...</option>';
@@ -89,7 +93,7 @@ document.addEventListener("DOMContentLoaded", fetchCategories);
 let colleges = [];
 
 function fetchColleges() {
-  fetch(getCollegesURL, { mode: "cors" }) // Replace with your actual API URL
+  fetch(collageurl, { mode: "cors" }) // Replace with your actual API URL
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
