@@ -1,133 +1,217 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
 }
 
+/* Header Section */
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
-    float: left;
-    margin-left: 20px;
-}
-
-header nav {
-    float: right;
-    margin-right: 20px;
+  font-size: 1.8em;
+  margin-left: 20px;
 }
 
 header nav ul {
-    list-style: none;
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
 }
 
 header nav ul li {
-    display: inline;
-    margin: 0 10px;
+  margin-left: 20px;
 }
 
 header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 header nav ul li a:hover {
-    color: #f4f4f4;
-    text-decoration: underline;
+  color: #f4f4f4;
+  text-decoration: underline;
 }
 
-.website a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
+/* Hero Section */
 .hero {
-    /* background: url('hero-image.jpg') no-repeat center center/cover; */
-    /* color: #fff; */
-    height: 400px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #e0e0e0;
 }
 
 .hero h2 {
-    font-size: 3em;
-    margin-bottom: 10px;
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none; /* Removes underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Shows underline on hover */
 }
 
 .hero .btn {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .hero .btn:hover {
-    background: #555;
+  background: #555;
 }
 
+/* Features Section */
 .features {
-    padding: 50px 0;
-    background-color: #fff;
-    text-align: center;
+  padding: 50px 0;
+  background-color: #fff;
+  text-align: center;
 }
 
 .features h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+  font-size: 2.5em;
+  margin-bottom: 30px;
 }
 
 .feature-grid {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .feature-item {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 5px;
-    width: 30%;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  flex: 1 1 300px; /* Grow, shrink, with a minimum width */
+  max-width: 30%;
 }
 
 .feature-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
 .feature-item p {
-    font-size: 1em;
+  font-size: 1em;
 }
 
-footer {
-    background: #333;
-    color: #fff;
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  /* Adjust header for smaller screens */
+  header {
+    padding: 15px 0;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  /* Hero section adjustments */
+  .hero {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .hero .btn {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+
+  /* Features section adjustments */
+  .feature-item {
+    flex: 1 1 100%; /* Full width for smaller screens */
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Header smaller text */
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  header nav ul {
     text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
+  }
+
+  /* Hero section text */
+  .hero h2 {
+    font-size: 1.8em;
+  }
+
+  .hero p {
+    font-size: 0.9em;
+  }
+
+  .hero .btn {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
 }

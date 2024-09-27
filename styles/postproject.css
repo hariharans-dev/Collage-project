@@ -23,23 +23,25 @@ header {
   padding: 20px 0;
 }
 
-header h1 {
-  float: left;
-  margin-left: 20px;
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header nav {
-  float: right;
-  margin-right: 20px;
+header h1 {
+  font-size: 1.8em;
+  margin-left: 20px;
 }
 
 header nav ul {
   list-style: none;
+  display: flex;
+  margin-right: 20px;
 }
 
 header nav ul li {
-  display: inline;
-  margin: 0 10px;
+  margin-left: 20px;
 }
 
 header nav ul li a {
@@ -76,7 +78,7 @@ header nav ul li a:hover {
 }
 
 .project-form {
-  width: 60%;
+  width: 80%;
   margin: auto;
   background: #fff;
   padding: 30px;
@@ -385,4 +387,132 @@ footer {
   padding: 10px; /* Consistent padding */
   border: 1px solid #ccc; /* Add border */
   border-radius: 5px; /* Rounded corners */
+}
+
+@media only screen and (max-width: 768px) {
+  /* Adjust header for smaller screens */
+  header {
+    padding: 15px 0;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group input[type="date"],
+  .form-group textarea,
+  .form-group select {
+    width: 100%; /* Full width minus padding */
+    padding: 10px;
+    font-size: 0.9em; /* Slightly smaller font size for smaller screens */
+  }
+
+  .project-form {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .select-container input[type="text"],
+  .select-container select {
+    flex-basis: 100%; /* Stack input and select elements */
+    margin-bottom: 10px; /* Space below each element */
+  }
+}
+@media only screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  header nav ul {
+    text-align: center;
+  }
+
+  .project-form {
+    width: 95%; /* Increased width to utilize more screen space */
+    padding: 20px; /* Consistent padding */
+    margin: auto; /* Center the form on the page */
+    background-color: #fff; /* Light background for visibility */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group input[type="date"],
+  .form-group textarea,
+  .form-group select {
+    font-size: 1em; /* Increased font size for better readability */
+    padding: 12px; /* Increased padding for larger touch targets */
+    width: 100%; /* Full width to utilize space */
+    margin-bottom: 10px; /* Space between elements */
+    border: 1px solid #ccc; /* Clear border for definition */
+    border-radius: 5px; /* Rounded corners for input fields */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Soft inner shadow for depth */
+  }
+
+  /* Ensure the Remove button is below the input fields */
+  .contact-item {
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically */
+  }
+
+  .contact-item .remove-contact {
+    margin-top: 10px; /* Space above the Remove button */
+    padding: 12px; /* Same padding as the Add Contact button */
+    background: #333; /* Keep the same background for buttons */
+    color: #fff; /* White text for contrast */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor for buttons */
+    width: 100%; /* Full width for buttons */
+    font-size: 1em; /* Set font size for consistency */
+  }
+
+  /* Center the Add Contact button */
+  .form-group {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  #add-contact {
+    font-size: 1em; /* Set button font size for better readability */
+    padding: 10px; /* Increased padding for a larger touch target */
+    background: #333; /* Keep dark background for buttons */
+    color: #fff; /* White text for contrast */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor for buttons */
+    width: 20%; /* Full width for buttons */
+    margin-top: 10px; /* Space above the Add Contact button */
+  }
+
+  .form-group button:hover {
+    background: #555; /* Darker background on hover */
+  }
+
+  .select-container {
+    display: flex;
+    flex-direction: column; /* Stack input and select elements */
+  }
+
+  .select-container input[type="text"],
+  .select-container select {
+    flex-basis: 100%; /* Full width for input and select */
+    margin-bottom: 10px; /* Space below each element */
+  }
 }

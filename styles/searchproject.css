@@ -21,16 +21,18 @@ header {
   background: #333;
   color: #fff;
   padding: 20px 0;
+  display: flex; /* Use flexbox for the header */
+  justify-content: center; /* Center the header content */
+  align-items: center; /* Center items vertically */
 }
 
 header h1 {
-  float: left;
-  margin-left: 20px;
+  margin: 0 20px; /* Adjust margin to center */
+  font-size: 2em; /* Default font size */
 }
 
 header nav {
-  float: right;
-  margin-right: 20px;
+  margin-left: auto; /* Push nav to the right */
 }
 
 header nav ul {
@@ -77,6 +79,7 @@ header nav ul li a:hover {
 
 .search-form {
   width: 60%;
+  max-width: 600px; /* Set a maximum width for the form */
   margin: auto;
   background: #fff;
   padding: 30px;
@@ -135,6 +138,7 @@ header nav ul li a:hover {
   cursor: pointer;
   width: 100%;
   border: none;
+  margin-top: 10px; /* Space above the button */
 }
 
 .form-group button:hover {
@@ -182,7 +186,54 @@ header nav ul li a:hover {
   background-color: #ddd; /* Highlight row on hover */
 }
 
-.results-container {
-  margin-top: 20px; /* Space above the results container */
-  display: none; /* Initially hidden */
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 15px 0; /* Reduce padding */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  header h1 {
+    font-size: 1.8em; /* Adjust font size */
+    margin: 10px 0; /* Space around the header */
+  }
+
+  header nav {
+    margin: 10px 0; /* Space above and below the nav */
+    text-align: center; /* Center the navigation */
+  }
+
+  header nav ul {
+    display: flex; /* Use flexbox for navigation */
+    flex-direction: column; /* Stack menu items vertically */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    align-items: center; /* Center items within the nav */
+  }
+
+  header nav ul li {
+    margin: 10px 0; /* Space between menu items */
+  }
+
+  .search-form {
+    width: 90%; /* Increase width for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.4em; /* Further reduce font size */
+  }
+
+  header nav ul {
+    text-align: center; /* Center menu items */
+  }
+
+  header nav ul li a {
+    font-size: 0.9em; /* Adjust link size */
+  }
+
+  .search-form {
+    width: 95%; /* Max width adjustment for small screens */
+  }
 }

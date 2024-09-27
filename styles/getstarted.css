@@ -1,125 +1,210 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
 }
 
+/* Header Section */
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
-    float: left;
-    margin-left: 20px;
-}
-
-header nav {
-    float: right;
-    margin-right: 20px;
+  font-size: 1.8em;
+  margin-left: 20px;
 }
 
 header nav ul {
-    list-style: none;
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
 }
 
 header nav ul li {
-    display: inline;
-    margin: 0 10px;
+  margin-left: 20px;
 }
 
 header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 header nav ul li a:hover {
-    color: #f4f4f4;
-    text-decoration: underline;
+  color: #f4f4f4;
+  text-decoration: underline;
 }
 
-.website a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
+/* Hero Section */
 .get-started {
-    padding: 50px 0;
-    background-color: #f4f4f4;
-    text-align: center;
+  height: auto;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #e0e0e0;
 }
 
 .get-started h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
 .get-started p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.get-started .btn {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.get-started .btn:hover {
+  background: #555;
+}
+
+/* Options Grid Section */
 .options-grid {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .option-item {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    width: 40%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.option-item:hover {
-    transform: scale(1.05);
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  flex: 1 1 300px; /* Flexible with a minimum width */
+  max-width: 30%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .option-item h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
+  font-size: 1.8em;
+  margin-bottom: 15px;
 }
 
 .option-item p {
-    font-size: 1em;
-    margin-bottom: 20px;
+  font-size: 1em;
+  margin-bottom: 20px;
 }
 
 .option-item .btn {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .option-item .btn:hover {
-    background: #555;
+  background: #555;
 }
 
-footer {
-    background: #333;
-    color: #fff;
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  /* Adjust header for smaller screens */
+  header {
+    padding: 15px 0;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  /* Hero section adjustments */
+  .get-started h2 {
+    font-size: 2em;
+  }
+
+  .get-started p {
+    font-size: 1em;
+  }
+
+  .get-started .btn {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+
+  /* Options section adjustments */
+  .option-item {
+    flex: 1 1 100%; /* Full width for smaller screens */
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  header nav ul {
     text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
+  }
+
+  .get-started h2 {
+    font-size: 1.8em;
+  }
+
+  .get-started p {
+    font-size: 0.9em;
+  }
+
+  .get-started .btn {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
 }
