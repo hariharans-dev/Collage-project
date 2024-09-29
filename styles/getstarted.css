@@ -12,13 +12,11 @@ body {
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
+  width: 80%;
   margin: auto;
   overflow: hidden;
 }
 
-/* Header Section */
 header {
   background: #333;
   color: #fff;
@@ -80,9 +78,9 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   text-decoration: underline;
-}
+} */
 
 .get-started .btn {
   background: #333;

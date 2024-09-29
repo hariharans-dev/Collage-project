@@ -68,7 +68,7 @@ header nav ul li a:hover {
 }
 
 .post-project h2 {
-  font-size: 2.5em;
+  font-size: 1.5em;
   margin-bottom: 20px;
 }
 
@@ -392,48 +392,52 @@ footer {
 @media only screen and (max-width: 768px) {
   /* Adjust header for smaller screens */
   header {
-    padding: 15px 0;
+    padding: 15px 0; /* Padding for header */
   }
 
   header .container {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items */
   }
 
   header h1 {
-    font-size: 1.5em;
-    margin: 10px 0;
+    font-size: 1.5em; /* Font size for the header */
+    margin: 10px 0; /* Margin above and below */
   }
 
   header nav ul {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
+    flex-direction: column; /* Stack navigation items vertically */
+    align-items: center; /* Center align navigation items */
+    margin-top: 10px; /* Margin above the navigation */
   }
 
   header nav ul li {
-    margin: 10px 0;
+    margin: 10px 0; /* Space between navigation items */
   }
+
+  /* Form styles for smaller screens */
   .form-group input[type="text"],
   .form-group input[type="number"],
   .form-group input[type="date"],
   .form-group textarea,
   .form-group select {
-    width: 100%; /* Full width minus padding */
-    padding: 10px;
-    font-size: 0.9em; /* Slightly smaller font size for smaller screens */
+    width: 100%; /* Full width for input and select elements */
+    padding: 10px; /* Padding inside the input/select */
+    font-size: 0.9em; /* Slightly smaller font size */
   }
 
+  .search-form,
   .project-form {
-    padding: 20px; /* Adjust padding for smaller screens */
+    padding: 20px; /* Adjust padding for forms */
   }
 
   .select-container input[type="text"],
   .select-container select {
-    flex-basis: 100%; /* Stack input and select elements */
+    flex-basis: 100%; /* Full width for input/select elements */
     margin-bottom: 10px; /* Space below each element */
   }
 }
+
 @media only screen and (max-width: 480px) {
   header h1 {
     font-size: 1.4em;
@@ -449,9 +453,8 @@ footer {
     margin: auto; /* Center the form on the page */
     background-color: #fff; /* Light background for visibility */
     border-radius: 8px; /* Rounded corners for a softer look */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 2px 5px rg ba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   }
-
   .form-group input[type="text"],
   .form-group input[type="number"],
   .form-group input[type="date"],

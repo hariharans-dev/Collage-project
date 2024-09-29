@@ -21,27 +21,42 @@ header {
   background: #333;
   color: #fff;
   padding: 20px 0;
-  display: flex; /* Use flexbox for the header */
-  justify-content: center; /* Center the header content */
-  align-items: center; /* Center items vertically */
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
-  margin: 0 20px; /* Adjust margin to center */
-  font-size: 2em; /* Default font size */
+  font-size: 1.8em;
+  margin-left: 20px;
 }
 
-header nav {
-  margin-left: auto; /* Push nav to the right */
+h2 {
+  font-size: 1.5em; /* Adjust font size for better visibility */
+  margin-bottom: 15px; /* More space below the title */
+  margin-top: 50px;
+  color: #333; /* Darker color for better contrast */
+  text-align: center;
+}
+
+p {
+  font-size: 1.2em; /* Slightly larger font for better readability */
+  margin-bottom: 40px; /* Increased space below the paragraph */
+  color: #555; /* Softer color for a more inviting look */
+  text-align: center;
 }
 
 header nav ul {
   list-style: none;
+  display: flex;
+  margin-right: 20px;
 }
 
 header nav ul li {
-  display: inline;
-  margin: 0 10px;
+  margin-left: 20px;
 }
 
 header nav ul li a {
@@ -55,31 +70,23 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
-.website a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.search-project {
+.search-section {
   padding: 50px 0;
-  background-color: #f4f4f4;
   text-align: center;
 }
 
-.search-project h2 {
+.search-section h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
 }
 
-.search-project p {
+.search-section p {
   font-size: 1.2em;
   margin-bottom: 40px;
 }
 
 .search-form {
-  width: 60%;
-  max-width: 600px; /* Set a maximum width for the form */
+  width: 80%;
   margin: auto;
   background: #fff;
   padding: 30px;
@@ -92,6 +99,12 @@ header nav ul li a:hover {
   text-align: left;
 }
 
+.website a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .form-group label {
   font-size: 1.1em;
   font-weight: bold;
@@ -99,27 +112,8 @@ header nav ul li a:hover {
   display: block;
 }
 
-.select-container {
-  display: flex;
-  align-items: center;
-}
-
-.select-container input[type="text"] {
-  flex: 1;
-  margin-right: 10px;
-}
-
-.select-container select {
-  flex-basis: 200px;
-  appearance: none;
-  background-color: #fff;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"><polygon points="0,0 5,5 10,0" style="fill:%23333;"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 10px;
-}
-
 .form-group input[type="text"],
+.form-group input[type="search"],
 .form-group select {
   width: 100%;
   padding: 10px;
@@ -136,104 +130,111 @@ header nav ul li a:hover {
   font-size: 1.2em;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
   width: 100%;
   border: none;
-  margin-top: 10px; /* Space above the button */
 }
 
 .form-group button:hover {
   background: #555;
 }
 
-.results-container {
-  margin-top: 30px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
 }
 
-.results-container p {
-  font-size: 1.2em;
-  color: #d9534f; /* Red for "No results" message */
-}
-
-.project-table {
-  width: 100%;
-  border-collapse: collapse; /* Merge border lines for a cleaner look */
-  margin-top: 20px; /* Space above the table */
-}
-
-.project-table th,
-.project-table td {
-  border: 1px solid #ccc; /* Light gray border for table cells */
-  padding: 12px; /* Padding inside table cells for better spacing */
-  text-align: left; /* Align text to the left */
-}
-
-.project-table th {
-  background-color: #333; /* Dark background for header */
-  color: #fff; /* White text color for header */
-  font-weight: bold; /* Bold font for header */
-}
-
-.project-table tr:nth-child(even) {
-  background-color: #f2f2f2; /* Light gray background for even rows */
-}
-
-.project-table tr:hover {
-  background-color: #ddd; /* Highlight row on hover */
-}
-
+/* Responsive styles */
 @media only screen and (max-width: 768px) {
   header {
-    padding: 15px 0; /* Reduce padding */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
+    padding: 15px 0;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: center;
   }
 
   header h1 {
-    font-size: 1.8em; /* Adjust font size */
-    margin: 10px 0; /* Space around the header */
-  }
-
-  header nav {
-    margin: 10px 0; /* Space above and below the nav */
-    text-align: center; /* Center the navigation */
+    font-size: 1.5em;
+    margin: 10px 0;
   }
 
   header nav ul {
-    display: flex; /* Use flexbox for navigation */
-    flex-direction: column; /* Stack menu items vertically */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    align-items: center; /* Center items within the nav */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
   }
 
   header nav ul li {
-    margin: 10px 0; /* Space between menu items */
+    margin: 10px 0;
+  }
+
+  h2 {
+    font-size: 1.5em; /* Adjust font size for better visibility */
+    margin-bottom: 15px; /* More space below the title */
+    margin-top: 20px;
+    color: #333; /* Darker color for better contrast */
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.2em; /* Slightly larger font for better readability */
+    margin-bottom: 40px; /* Increased space below the paragraph */
+    color: #555; /* Softer color for a more inviting look */
+    text-align: center;
   }
 
   .search-form {
-    width: 90%; /* Increase width for smaller screens */
+    padding: 20px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="search"],
+  .form-group select {
+    font-size: 0.9em;
   }
 }
 
 @media only screen and (max-width: 480px) {
   header h1 {
-    font-size: 1.4em; /* Further reduce font size */
+    font-size: 1.4em;
   }
 
-  header nav ul {
-    text-align: center; /* Center menu items */
+  h2 {
+    font-size: 1.5em; /* Adjust font size for better visibility */
+    margin-bottom: 15px; /* More space below the title */
+    margin-top: 20px;
+    color: #333; /* Darker color for better contrast */
+    text-align: center;
   }
 
-  header nav ul li a {
-    font-size: 0.9em; /* Adjust link size */
+  p {
+    font-size: 1.2em; /* Slightly larger font for better readability */
+    margin-bottom: 40px; /* Increased space below the paragraph */
+    color: #555; /* Softer color for a more inviting look */
+    text-align: center;
   }
 
   .search-form {
-    width: 95%; /* Max width adjustment for small screens */
+    width: 95%;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="search"],
+  .form-group select {
+    font-size: 1em;
+    padding: 12px;
+    margin-bottom: 5px;
+  }
+
+  .form-group button {
+    font-size: 1em;
+    padding: 12px;
   }
 }
